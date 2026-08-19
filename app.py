@@ -7,7 +7,7 @@ st.title("SafeCityAI - Helmet Violation Detector")
 st.write("Upload a traffic image and the model will flag riders without helmets.")
 
 # loading model once, takes a few seconds
-model = torch.hub.load('ultralytics/yolov5', 'custom', path='best.pt')
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='best.pt', trust_repo=True)
 
 img_file = st.file_uploader("Choose an image", type=['jpg', 'jpeg', 'png'])
 
